@@ -95,7 +95,7 @@ flash: app.elf
 .PHONY: all clean submodules flash
 
 gdb: app.elf
-	gdb-multiarch -ex 'target extended-remote localhost:4242' -ex 'load' -ex 'break main' -ex 'svd_load STM322.svd' app.elf
+	gdb-multiarch -ex 'target extended-remote localhost:4242' -ex 'load' -ex 'break main' -ex 'svd_load STM32L432.svd' app.elf
 
 gdb-nosvd: app.elf
 	gdb-multiarch -ex 'target extended-remote localhost:4242' -ex 'load' -ex 'break main' app.elf
